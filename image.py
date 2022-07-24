@@ -5,7 +5,6 @@
 """
 
 import asyncio
-from dis import disco
 from aiohttp import ClientSession
 from colorama import Fore
 from pyppeteer import launch
@@ -62,6 +61,7 @@ async def main(show_browser:bool=False):
     count = 0
     urls = []
     print(design())
+    
     browser = await launch(headless=show_browser)
     page = await browser.newPage()
     await page.goto('https://pinterest.com/login')
